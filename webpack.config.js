@@ -7,7 +7,7 @@ const OptimizeJsPlugin = require("optimize-js-plugin");
 let env = process.env.NODE_ENV || "development";
 let plugins = [
   new HtmlWebpackPlugin({
-    template: "src/index.html",
+    template: "client/templates/index.html",
     filename: "index.html",
     inject: "body"
   })
@@ -25,10 +25,10 @@ if (env === "production") {
 }
 
 module.exports = {
-  entry: ["react-hot-loader/patch", "./src/index.js"],
+  entry: ["react-hot-loader/patch", "./client/index.js"],
   output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "app.bundle.js"
+    path: path.resolve(__dirname, "public"),
+    filename: "bundle.js"
   },
 
   module: {
