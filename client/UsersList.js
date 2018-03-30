@@ -6,8 +6,8 @@ import styles from './css/UsersList.css';
 const UsersList = props => (
   <div className={styles.Users}>
     <div className={styles.UsersOnline}>
-      {// This displays the number of active users.
-        props.users.length} people online
+      People online: {// This displays the number of active users.
+        props.users.length}
     </div>
     <ul className={styles.UsersList}>
       {
